@@ -1,0 +1,110 @@
+//お気に入り用
+ $(function(){
+	const fav_check = $('input:hidden[name="fav_check"]').val();
+	const fav_item_code = $('input:hidden[name="fav_item_code"]').val();
+	const login_userdata = $('input:hidden[name="login_userdata"]').val();
+	
+	 if (fav_check == 0) {
+	 	$(".like_off").hide();
+	 } else if (fav_check == 1) {
+		$(".like_on").hide();
+	 }
+	 
+		$("#like").on('click',function(){	
+			//console.log("お気に入ボタンをおしました");
+			// console.log(login_userdata);
+			// console.log(fav_item_code);
+			$.post("./favin.php",
+//		$.post("./test.php",
+			{
+				"fav_item_code" : fav_item_code,				
+				"login_userdata" : login_userdata
+
+			}).done(function(data) {  
+				// console.log(data);　//コンソールでの確認用
+				$("#like_in").text("お気に入りに追加しました");
+				$(".like_on").hide();
+				$(".like_off").show();
+				$fav_check = 1;
+				
+				
+       		}).fail(function(XMLHttpRequest, status, e){
+       			$("#like_in").text("お気に入りに追加失敗しました。"); 
+    		});
+		});
+
+		
+		$("#notlike").on('click',function(){
+				$(".like_off").show();				
+					 
+    			//console.log("お気に入り解除ボタンをおしました");
+    			$.post("./favin.php",
+    			{
+    				"fav_item_code" : fav_item_code,				
+    				"login_userdata" : login_userdata
+    			}).done(function(data) {  
+    				// console.log(data);　//コンソールでの確認用
+    				$("#like_in").text("お気に入りから削除しました");
+    				$(".like_off").hide();
+    				$(".like_on").show();
+    				$fav_check = 0;
+    				
+    				
+           		}).fail(function(XMLHttpRequest, status, e){
+           			$("#like_in").text("お気に入りからの削除に失敗しました。");
+        		});		　		     
+			
+		});
+	});
+
+
+
+
+
+// カート用
+
+$(function(){
+	$("#cart_button").click(function(){
+		const history_flag = $('input:hidden[name="history_flag"]').val();
+		  if(history_flag == 1){
+			  $("#errmsg").text("この商品は購入済みです");
+		  }else{
+			const item_code = $('input:hidden[name="item_code"]').val();
+			const item_name = $('input:hidden[name="item_name"]').val();
+			const price = $('input:hidden[name="price"]').val();
+			const sale_flag = $('input:hidden[name="sale_flag"]').val();
+			const seller_date = $('input:hidden[name="seller_date"]').val();
+			const thumbnail = $('input:hidden[name="thumbnail"]').val();
+			const customer_code = $('input:hidden[name="customer_code"]').val();
+			const sale_ratio = $('input:hidden[name="sale_ratio"]').val();
+			const campaign_name = $('input:hidden[name="campaign_name"]').val();
+			const sale_price = $('input:hidden[name="sale_price"]').val();
+			
+			$.post("./module/cart_in.php",{
+				item_code: item_code,
+				item_name: item_name,
+				price : price,
+				sale_flag : sale_flag,
+				sale_ratio : sale_ratio,
+				sale_price : sale_price,
+				campaign_name : campaign_name,
+				seller_date : seller_date,
+				thumbnail : thumbnail,
+				customer_code : customer_code
+				},
+				  function(data){
+					    //  console.log("セッションカート数："+data.cart_count);
+					     if(data.errmsg){
+					     	$("#errmsg").text(data.errmsg);
+					     	$("#cart_in_success").text("");
+					     }else{
+						     $("#cart_in_success").text("カートに追加しました");
+					     }
+					     
+					     $("#cart").html("<img id='cart' src='images/cart_icon/cart"+data.cart_count+".png' alt='カート'>");
+				},"json"
+			);
+		  }
+	  });
+	
+});

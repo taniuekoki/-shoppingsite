@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+body {
+  font-size: 18px;
+  color: #121212;
+  
+}
+
+main{
+	margin-bottom: 60px;
+}
+
+main h2{
+	font-size: 20px;
+	text-align: center;
+	margin: 40px 0;
+}
+main p{
+	margin: 10px 0;
+}
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+main p{
+  margin-top: 20px;
+}
+
+.errmsg{
+	text-align: center;
+}
+#conbtn, .ab{
+    text-align: center;
+    width: 180px;
+    padding:10px;
+	color: #ffffff;
+	background: #888888;
+	border-radius: 20px;
+}
+
+.form{
+	width:600px;
+	margin: 0 auto;
+}
+select{
+  border: 1px solid #cccccc;
+  height: 35px;
+  width: 600px;
+  padding-left: 15px;
+  padding: 4px 8px;
+  margin: 5px;
+  border-radius: 8px;
+
+}
+input[type="email"]{
+	border: 1px solid #cccccc;
+  background-color: #ffffff;
+  width: 600px;
+  margin: 5px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+textarea{
+	height: 100px;
+	border: 1px solid #cccccc;
+  background-color: #ffffff;
+  width: 600px;
+  margin: 5px;
+  padding: 4px 8px;
+}
+
+.bt{
+  margin-top: 40px;
+  display:flex;
+  justify-content: space-evenly;
+	
+}
+
+.red{
+	color: red;
+	width: 600px;
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+/*ここからセレクトボックス*/
+
+
+.selectwrapp2 {
+  position: relative;
+  
+}
+.selectwrapp2::after {
+  position: absolute;
+  top: 35%; /* 矢印の位置 */
+  right: 15px; /* 矢印の位置 */
+  width: 10px; /* 矢印の大きさ */
+  height: 10px; /* 矢印の大きさ */
+  border-top: 3px solid #58504A; /* 矢印の線 */
+  border-right: 3px solid #58504A; /* 矢印の線 */
+  -webkit-transform: rotate(135deg); /* 矢印の傾き */
+  transform: rotate(135deg); /* 矢印の傾き */
+  pointer-events: none; /* 矢印部分もクリック可能にする */
+  content: ""; 
+}
+
+select:focus {
+  outline: none; /* focus 時のデフォルトの枠線を消す */
+}
+::-ms-expand {
+  display: none;  /* IE 対応( select のデフォルト矢印を消す) */
+}
+
+.alert{
+	color:red;
+}
+
+
+
+
+/* ----------ここからレスポンシブ---------- */
+@media screen and (max-width: 640px) {
+
+	main h2{
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .red{
+    width: 100%;
+  }
+	main p{
+		margin-left: 8px;
+	}
+	.form{
+		width: 100vw;
+	}
+	input[type="email"], input[type="password"], select{
+		/* margin: 5px auto; */
+		width: 97vw;
+	}
+  select{
+    margin-left: 5px;
+  }
+  .selectwrap{
+    width: 100%;
+  }
+  .selectwrap::after{
+    right: 25px;
+  }
+  textarea{
+    width: 98%;
+  }
+  #btn1{
+    margin: 0 auto;
+  }
+  #mailbox .alert {
+    display: inline-block;
+  }
+
+	.bt{
+		padding: 8px;
+	}
+	.link{
+		margin-bottom: 40px;
+	}
+  #conbtn, .ab{
+    text-align: center;
+    width: 150px;
+    padding:10px;
+	color: #ffffff;
+	background: #888888;
+	border-radius: 20px;
+  }
+	footer{
+		padding:40px auto;
+		width: 100vw;
+	}
+
+
+
+
+}

@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+/* 最終更新 2023-02-15 kita */
+
+
+
+body {
+  /* font-family: 'Sawarabi Mincho',serif; */
+  font-size: 18px;
+  color: #121212;
+  /* width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 80px 20px 0; */
+}
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 80px 20px 0; */
+}
+
+header {
+  background-color: #ffffff;
+}
+
+h1 img{
+  width: 400PX;
+  height: 100PX;
+}
+
+header h1 {
+  font-size: 30px;
+  padding-top: 20px;
+  margin-left: 100px;
+  height:  50px;
+  width: 800px;
+}
+
+#he{
+  display: flex;
+}
+#log{
+  font-size: 20px;
+  padding-top: 30px;
+  /* display: flex; */
+  /* margin: 0 0 0 800px; */
+}
+
+#nav > ul {
+  /* position:fixed; */
+  display: flex;
+  /* justify-content: space-around; */
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+}
+.jj{
+  position:absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+  background-color: #ffffff;
+}
+
+#nav{
+  height: 100px;
+  /* margin-top: 10px; */
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.headp {
+	width:1050px;
+  /*text-align: center;*/
+  font-size: 24px;
+  /*letter-spacing: .05em;*/
+  /*margin-bottom: 80px;*/
+}
+.headp > span{
+	display:block;
+	text-align:right;
+	margin-right:10px;
+}
+
+.head{
+	display:flex;
+	width:1200px;
+	margin:40px 0;
+}
+.sort{
+	width:150px;
+	border: 2px solid #474747;
+	margin-left:0px;
+	padding:5px;
+}
+
+
+/* 検索結果画像集 */
+.topPhoto{
+  width: 1200px;
+}
+.photoGarelly {
+	display:flex;
+	flex-wrap:wrap;
+	/*justify-content: space-evenly;*/
+}
+
+.photoGarelly a img{
+	width: 350px;
+	height: 350px;
+	/*margin:20px;*/
+	border-radius:10px
+	/*margin-bottom:40px;*/
+}
+
+
+.photoGarelly li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price div, .price span{
+	margin: 5px 0;
+	padding-left: 20px;
+}
+.nebiki{
+	color: red;
+}
+
+/* ボタン部分 */
+.bb{
+	display:flex;
+	justify-content: space-evenly;
+	width:500px;
+	margin:40px auto;
+	
+}
+button[type=button]{
+	display: inline;
+}
+
+
+/* ここまで */
+
+
+.selectwrap {
+  position: relative;
+}
+.selectwrap::after {
+  position: absolute;
+  top: 10px; /* 矢印の位置 */
+  right: 15px; /* 矢印の位置 */
+  width: 10px; /* 矢印の大きさ */
+  height: 10px; /* 矢印の大きさ */
+  border-top: 3px solid #58504A; /* 矢印の線 */
+  border-right: 3px solid #58504A; /* 矢印の線 */
+  -webkit-transform: rotate(135deg); /* 矢印の傾き */
+  transform: rotate(135deg); /* 矢印の傾き */
+  pointer-events: none; /* 矢印部分もクリック可能にする */
+  content: ""; 
+  }
+
+select:focus {
+  outline: none; /* focus 時のデフォルトの枠線を消す */
+}
+::-ms-expand {
+  display: none;  /* IE 対応( select のデフォルト矢印を消す) */
+}
+
+/*ここまでセレクトボックス*/
+
+/*fujimoto追加分*/
+.del{
+  text-decoration-line: line-through;
+  text-decoration-style:solid;
+  text-decoration-color: red;
+}
+.price{
+	    margin-bottom: 30px;
+}
+
+.imgdiv{
+	width:350px;
+	height:350px;
+	margin:20px;
+}
+.photoGarelly a img{
+	object-fit: cover;
+}
+
+/*2023-02-01 fujimoto追加分*/
+.page_tag{
+	position:absolute;
+	text-align:center;
+}
+div.bb form{
+	font-weight:bold;
+}
+#prev_page_form{
+
+	margin : 0 auto 0 0;
+}
+
+#next_page_form{
+
+	margin : 0 0 0 auto;
+}
+
+/*20230202maesara追加分*/
+.display_haba{
+	width: 400px;  
+	white-space: nowrap;  
+	overflow: hidden;  
+	text-overflow: ellipsis;  
+	-webkit-text-overflow: ellipsis;  
+	-o-text-overflow: ellipsis;
+}
+
+
+
+/* ----------ここからレスポンシブ--------- */
+@media screen and (max-width: 640px) {
+  .head{
+    display: block;
+    width: 100%;
+  }
+  .headp{
+    width: 100%;
+    font-size: 16px;
+    padding-left: 5px;
+  }
+  .headp > span{
+    text-align: right;
+    margin: 10px 0;
+    padding-right: 5px;
+  }
+  /* .selectwrap::after{
+    right: 90%;
+  } */
+  .display_haba{
+    display: none;
+  }
+  .photoGarelly > div{
+    width: 50%;
+    height: 30vh;
+  }
+  .imgdiv{
+    width: 100%;
+    height: 20vh;
+    margin: 0 auto;
+  }
+  .photoGarelly a img{
+    display: block;
+    width: 90%;
+    height: 20vh;
+    margin: 0 auto;
+  }
+  .price{
+    text-align: center;
+    margin-top: 5px;
+  }
+  .price span{
+    display: block;
+  }
+  .bb{
+    width: 80%;
+  }
+  #sortform{
+    text-align: right;
+    margin-right: 5px;
+  }
+  .sort{
+    text-align: left;
+    width: 35%;
+  }
+
+
+
+
+
+}

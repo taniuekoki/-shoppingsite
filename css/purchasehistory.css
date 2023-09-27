@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+/* 20220222 レスポンシブkita*/
+
+main h1{
+	font-size: 20px;
+	margin-top: 30px;
+    text-align: center;
+}
+
+.syouhin{
+	width:1000px;
+	margin: 20px auto;
+	display: flex;
+}
+
+
+
+.topclm{
+  display: flex;
+}
+.day{
+	padding:20px 0;
+}
+
+
+.sho{
+	margin: auto ;
+}
+.sho2{
+	margin: auto 0 auto auto ;
+}
+.clm p{
+	padding:20px 0;
+}
+
+
+input[type="button"], .bt {
+	width:200px;
+    text-align: center;
+    background-color: #888888;
+	color: #ffffff;
+	padding:10px;
+	margin: 0 0 0 auto;
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ 
+.line{
+	border-top: 3px solid #888888;
+	width:1000px;
+	margin: 15px auto;
+}
+
+.pay{
+	top:100px;
+	width:350px;
+	padding:30px;
+	position:absolute;
+	left:800px;
+	background-color: #ffffff;
+	border: 3px solid #888888;
+	z-index:100;
+	line-height:2.0;
+}
+.goukei{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+
+.red{
+	color: red;
+}
+
+.false{
+	text-align: center;
+}
+
+
+
+/*---ここから追加分0201---*/
+.sort{
+	width:150px;
+	border: 2px solid #474747;
+	display: block;
+	margin: 20px 20px 20px auto;
+	padding:5px;
+}
+
+.selectwrap {
+  position: relative;
+}
+.selectwrap::after {
+  position: absolute;
+  top: 10px; /* 矢印の位置 */
+  right: 35px; /* 矢印の位置 */
+  width: 10px; /* 矢印の大きさ */
+  height: 10px; /* 矢印の大きさ */
+  border-top: 3px solid #58504A; /* 矢印の線 */
+  border-right: 3px solid #58504A; /* 矢印の線 */
+  -webkit-transform: rotate(135deg); /* 矢印の傾き */
+  transform: rotate(135deg); /* 矢印の傾き */
+  pointer-events: none; /* 矢印部分もクリック可能にする */
+  content: ""; 
+  }
+
+select:focus {
+  outline: none; /* focus 時のデフォルトの枠線を消す */
+}
+::-ms-expand {
+  display: none;  /* IE 対応( select のデフォルト矢印を消す) */
+}
+
+/*ここまでセレクトボックス*/
+
+
+
+
+input[type="button"], .bt , .cart_button_class{
+	width:200px;
+    text-align: center;
+    background-color: #888888;
+	color: #ffffff;
+	padding:10px;
+	margin: 0 0 0 auto;
+	border-radius:20px;
+}
+
+#no_item{
+	margin:50px auto 350px;
+}
+/*---ここまで追加分0201---*/
+
+
+
+/*2023-02-02 fujimoto追加分 ボタンの丸み*/
+.radius20{
+	border-radius:20px;
+}
+
+/*2023-02-03 taniue 商品名幅固定*/
+.clm{
+	width:470px;
+}
+
+
+/*2023-02-08 kita追加分 画像の丸み変更のためテーブル作成*/
+table{
+	margin: 0 auto 0 100px;
+}
+tr{
+	height: 200px;
+	
+}
+th {
+	width:300px;
+	height:300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+th img{
+	max-width:300px;
+	max-height:300px;
+	object-fit: contain;
+	border-radius: 8px;
+	margin: auto;
+}
+.td1, .td2{
+	margin: auto 0;
+	vertical-align: middle;
+}
+.td1 p, .day{
+	margin: 20px;
+}
+.td2{
+	width: 220px;
+}
+.td1{
+	width:430px;
+}
+
+
+ /* ----------ここからレスポンシブ---------- */
+ @media screen and (max-width: 640px) {
+
+	tr{
+		display: flex;
+		/* align-items: flex-start; */
+		height: 30vh;
+		width: 50vw;
+	}
+	h1{
+    margin: 20px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+	table{
+		width: 100%;
+		margin: 0;
+		position: relative;
+	}
+	tr{
+		width: 100%;
+		/* height: 35vh; */
+	}
+	th{
+		width: 45vw;
+		height: 100%;
+		align-items: stretch;
+		padding-left: 5px;
+	}
+	th img{
+		width: 100%;
+		margin-top: 10px;
+		border-radius: 5px;
+
+	}
+	.shouimg{
+		/* width: 100%; */
+		height: 50vw;
+		object-fit: contain;
+	}
+	.td1{
+		width: 100%;
+		margin :15px auto auto auto;
+	}
+	.td1 p{
+		padding: 5px;
+		margin: 0;
+	}
+	.clm{
+		width: 100%;
+	}
+	.clm p{
+		padding:15px 0 5px 15px;
+		/* white-space: nowrap;
+		overflow: hidden; */
+	}
+	.td2{
+		/* width: 0px; */
+		position: absolute;
+		bottom: 0px;
+		/* left: 30%; */
+	}
+	/* .sho2 form, .sho2 #cart_button {
+		display: none;
+	} */
+	.sho2{
+		width: 100vw;
+		margin: 0;
+		height: 40px;
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.cart_button_class{
+		padding: 5px;
+	}
+	
+  .line{
+    width: 90%;
+    margin: 10px auto;
+    border-top: 2px solid #888888;
+  }	
+	.day , .td1 p{
+		margin: 5px;
+		padding:5px 0;
+	}
+	input[type="button"], .bt, .cart_button_class {
+		width: 40vw;
+		padding:8px;
+	}
+
+
+
+
+
+ }

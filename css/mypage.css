@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+body {
+  font-size: 18px;
+  color: #121212;
+  
+}
+
+main p{
+	margin: 30px 0;
+}
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+  
+}
+h2{
+	margin: 20px;
+	text-align: center;
+}
+.myin{
+  width: 350px;
+  margin: 100px auto;
+  
+}
+h3{
+	margin: 10px;
+	text-align: center;
+}
+
+.list{
+	margin: 40px;
+}
+
+.list > li{
+	margin: 15px;
+}
+/*20230208fujimoto*/
+.hoge{
+padding-top:1em;
+}
+
+
+
+/*** ----------ここからレスポンシブ---------- ***/
+
+@media screen and (max-width: 640px) {
+	.myin{
+		width: 100%;
+		margin: 40px auto;
+	}
+
+
+
+
+}

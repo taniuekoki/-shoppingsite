@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/*2023-03-08 fujimoto 16:30 下部に記載*/
+
+header{background: #ff838b;} /*把握しやすくするための一時色付け*/
+.contentA{background: #b3d874;}
+.contentB{background: #6fb5ff;}
+footer{background: #ffce5b;}
+
+.center{text-align:center;
+}
+
+.main{
+   /* margin:0 5%; */
+}
+.contentA{
+  /* width: 35%; */
+}
+.contentB{
+ /* width: 55%; */
+}
+input[type=number] {
+  height: 2em;
+  width: 100px;
+  border-radius: 12px;
+  border: 1px solid black;
+}
+
+
+
+
+/*2023-03-08 fujimoto********************************** */
+button{
+  cursor: pointer;
+}
+main{
+  width: 1200px;
+  margin: 0 auto;
+}
+.main_wrap{
+  width: 1000px;
+  margin: 0 auto;
+}
+.flex{
+  display: flex;
+}
+.image_box{
+  justify-content: space-evenly;
+}
+.thumbnail_image_box{
+  padding: 20px;
+  background-color: #83fff5;
+}
+.download_image_box{
+  padding: 20px;
+  background-color: #febdf7;
+}
+
+.thumbnail_image{
+  max-width: 300px;
+  max-height: 300px;
+}
+.thumb{
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.method{
+  font-size: 22px;
+}
+#menu1,#menu2{
+  width: 200px;
+}
+
+.contentB{
+  width:400px ;
+  margin: 0 auto;
+}
+.right{
+  text-align: right;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+/*ここまで*/

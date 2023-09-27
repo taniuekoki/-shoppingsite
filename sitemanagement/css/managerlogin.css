@@ -1,0 +1,93 @@
+main{
+    width: 1200px;
+    margin: 0 auto;
+}
+#logo{
+    display: block;
+    width: 300px;
+    margin: 40px auto;
+}
+h1{
+    text-align: center;
+    font-size: 26px;
+    color: rgb(86, 86, 86);
+}
+
+.center{
+    text-align: center;
+}
+input{
+    border: solid 1px #a5a5a5;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+button{
+    border: solid 1px #a5a5a5;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    user-select: none;
+}
+.form_area{
+
+    width: 500px;
+    height: 300px;
+    margin: 50px auto;
+    background-color: rgb(227, 235, 243);
+    border-radius: 20px;
+}
+#login_form,#mfacode_form{
+    padding: 60px 40px;
+}
+#user_id,#user_pass{
+    width: 400px;
+    font-size: 1.2em;
+    margin: 10px 0 20px ;
+}
+.err_msg{
+    height: 0;
+    margin: 0;
+    color: red;
+    font-size: 0.8em;
+    position: relative;
+    top: -20px;
+}
+.err_msg span{
+    height: 0;
+}
+.err_server{
+    top: 0px;
+    text-align: right;
+    margin-right: 20px;
+}
+#submit_btn{
+    display: block;
+    position: relative;
+    padding: 3px 15px 0;
+    margin: auto 20px auto auto;
+    line-height: 1.8em;
+}
+#mfamsg{
+    padding-top: 40px;
+    text-align: center;
+}
+#mfacode{
+    display: block;
+    margin: 10px auto;
+    font-size: 1.5em;
+    width: 105px;
+}
+.is-error-mfacode{
+    top:5px
+}
+
+.relogin_btn{
+    cursor: pointer;
+}
+
+footer{
+    margin: 0 auto;
+    width: 1200px;
+    font-size: small;
+    text-align: center;
+}

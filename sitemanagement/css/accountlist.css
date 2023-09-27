@@ -1,0 +1,123 @@
+/* 2023-02-22 kobayasi 初期実装 */
+@charset "UTF-8";
+
+
+
+.innerWrap {
+	width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+   
+}
+
+/*.tura {
+	/*text-align: center;
+	margin: 0 auto;
+	display:flex;
+  flex-wrap:space-evenly;
+  gap: 120px 120px;
+  margin:30px;
+}*/
+
+
+
+main {
+	width:1200px;
+	text-align: center;
+	margin: 0 auto;
+	/*min-height:540px;*/
+}
+
+h1 {
+	margin-top:30px;
+	margin-bottom:50px;
+	font-size:40px;
+	
+}
+	
+.line {
+	  text-align: center;
+	  margin: 0 auto;
+    width: 950px;
+    margin-top:5px;
+    border-top: 3px solid #888888;
+    /* margin:  20px auto 20px 80px;*/
+}
+
+table {
+	text-align: center;
+	margin: 0 auto;
+	width:950px;
+}
+
+th {	
+	text-align: center;
+	padding:20px 40px 20px 40px;
+}
+
+tr td {
+	text-align: center;
+  margin: 0 auto;
+	border-bottom: 3px #888888 solid;
+	padding:20px 40px 20px 40px;
+	max-width: 400px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+	
+	}
+	
+	#ikou {
+	 margin-top:30px;
+	 border: 2px solid #888888;
+	 background-color:#dddddd;
+	}
+
+  #button {
+   margin-top:30px;
+   border: 2px solid #666666;
+   background-color:rgb(255, 128, 128);
+  }
+  .btn2 {
+    border: 2px solid #666666;
+    background-color:#bbbbbb;
+  }
+  .text {
+    background-color:#dddddd;
+  }
+
+	
+/*20230222 fujimoto*/
+button{
+ 	padding:10px 15px;
+ 	border-radius:5px;
+}
+input[type='submit'],#ikou{
+ 	padding:5px 10px;
+ 	border-radius:5px;
+}
+input[type='text']{
+	width:150px;
+	height:30px;
+	border-radius:5px;
+	border:solid 1px black;
+}
+
+h1{color:#444444;}
+body{font-size:1.2em;}
+
+#logo{
+    display: block;
+    width: 300px;
+    margin: 40px auto;
+}
+#logo > img{
+	    width: 300px;
+}
+
+#copy{
+    margin: 40px auto 0;
+    font-size: small;
+    text-align: center;
+}
+

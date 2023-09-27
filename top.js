@@ -1,0 +1,179 @@
+$(function(){
+	
+	//-------タグ検索-----------
+	const array = new Array();
+	array[''] = new Array({cd:"0", label:"--------"});
+	array["subete"] = array[''];
+	array["doubutu"] = [
+	  {cd:"1", label:"--------"},
+      {cd:"2", label:"犬"},
+      {cd:"3", label:"猫"},
+      {cd:"4", label:"その他"},
+    ];
+    array["kisetu"] = [
+	  {cd:"1", label:"--------"},
+      {cd:"2", label:"春"},
+      {cd:"3", label:"夏"},
+      {cd:"4", label:"秋"},
+      {cd:"5", label:"冬"},
+    ];
+    array["tabemono"] = [
+	  {cd:"1", label:"--------"},
+      {cd:"2", label:"料理"},
+      {cd:"3", label:"お菓子"},
+      {cd:"4", label:"その他"},
+    ];
+    /*array["sonota"] = [
+      {cd:"1", label:"--------"},
+    ];*/
+    
+    document.getElementById('menu1').onchange = function(){
+      menu2 = document.getElementById("menu2");
+      menu2.options.length = 0
+      const changed = menu1.value;
+      for (let i = 0; i < array[changed].length; i++) {
+        const op = document.createElement("option");
+        value = array[changed][i]
+        op.value = value.cd;
+        op.text = value.label;
+        menu2.appendChild(op);
+      }
+    }
+    
+    //-----radioボタンのチェック-----
+    
+    $('[name="kensaku"]:radio').change( function() {
+    	if($('[id=a]').prop('checked')){
+    		$('.text').hide();
+    		$('.text01').show();
+    	} else if ($('[id=b]').prop('checked')) {
+    		$('.text').hide();
+    		$('.text02').show();
+    	}
+    });
+    
+    //-----radioボタンのチェックここまで-----
+    
+    
+
+    
+    
+	//-------タグ検索-----------
+	
+
+  //  ----------navここから---------------
+
+  let nav = $("#nav").offset().top;
+  $(window).on("scroll", function() {
+    // スクロール値を取得する場合「.scrollTop()」
+    let scroll = $(window).scrollTop();
+    let fixd = 90-scroll;
+    if(fixd <= 0){
+      $("#nav").css("position","fixed");
+      $("h2").css("margin-top","100px");
+    }else{
+      $("#nav").css("position","");
+      $("h2").css("margin-top","");
+
+    }
+  });
+  // -----------navここまで---------------
+
+  // 
+   // ハンバーガーメニュークリックイベント
+   $('.hamburger-menu').click(function(){
+    if($(this).hasClass('open')){
+      // ナビゲーション非表示
+      $('.nav-sp').slideToggle(200);
+      // ハンバーガーメニューを元に戻す
+       $(this).removeClass('open');
+    }else{
+      // ナビゲーションを表示
+      $('.nav-sp').slideToggle(200);
+      // ハンバーガーメニューを✖印に変更
+       $(this).addClass('open');
+    }
+  });
+
+  // ---------top画像集ここから-----------
+
+  //スクロールの方向 -1の時は左、1の時には右
+  let dir = -1;
+
+  //スクロールのインターバル（何秒ごとにスクロールさせるか。3000ミリに設定）
+  const interval = 3000;
+
+  //スクロールのスピード（700ミリ秒に設定）
+  const duration = 700;
+
+  //タイマー用の変数
+  let timer;
+
+  //リストの順番を変更（３番目を１番最初にする）
+  $("#slide .ul").prepend($("#slide photo:last-child"));
+
+  //リストの位置を変更（画像１枚分ずらす）
+  $("#slide .ul").css("left", -1200);
+
+  //3000ミリ秒（変数intervalの値）ごとにslideTimer()関数を実行
+  timer = setInterval(slideTimer, interval);
+
+  //slideTimer()関数
+  function slideTimer(){
+    if(dir == -1){
+      //画像一枚分左へスクロール
+      $("#slide .ul").animate({"left" : "-=1200px"}, duration,
+      function(){
+        //リストの順番を変更
+        $(this).append($("#slide photo:first-child"));
+
+        //リストの位置を変更
+        $(this).css("left", -1200);
+      });
+    }else{
+      //画像一枚分右へスクロール
+      $("#slide .ul").animate({"left" : "+=1200px"}, duration,
+      function(){
+        //リストの順番を変更
+        $(this).prepend($("#slide photo:last-child"));
+
+        //リストの位置を変更
+        $(this).css("left", -1000);
+
+        //左方向へリセット
+        dir = -1;
+
+    });
+  }
+}
+
+  //前へ戻るボタン
+  $("#prevBtn").click(function(){
+    //スクロール方向の切り替え（右）
+    dir = 1;
+
+    //タイマーを停止して再スタート
+    clearInterval(timer);
+    timer = setInterval(slideTimer, interval);
+
+    //初回の関数実行
+    slideTimer();
+  });
+
+  //次へ進むボタン
+  $("#nextBtn").click(function(){
+    //スクロール方向の切り替え（左）
+    dir = -1;
+
+    //タイマーを停止して再スタート
+    clearInterval(timer);
+    timer = setInterval(slideTimer, interval);
+
+    //初回の関数実行
+    slideTimer();
+  });
+
+  // ---------top画像集ここまで-----------
+
+
+});

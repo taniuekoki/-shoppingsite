@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+
+main h1{
+	font-size: 30px;
+	margin-top: 30px;
+    text-align: center;
+}
+
+.syouhin{
+	width:1000px;
+	margin: 20px auto;
+	display: flex;
+}
+
+.syouimg img{
+	width:300px;
+	height:300px;
+    margin:auto; 
+    object-fit: contain;
+}
+
+.topclm{
+  display: flex;
+}
+.day{
+	padding:20px 0;
+}
+
+
+.sho{
+	margin: auto ;
+}
+.sho2{
+	margin: auto 0 auto auto ;
+}
+.clm p{
+	padding:20px 0;
+}
+
+
+input[type="button"], .bt {
+	width:200px;
+    text-align: center;
+    background-color: #888888;
+	color: #ffffff;
+	padding:10px;
+	margin: 0 0 0 auto;
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ 
+.line{
+	border-top: 3px solid #888888;
+	width:1000px;
+	margin: 0 auto;
+}
+
+.pay{
+	top:100px;
+	width:350px;
+	padding:30px;
+	position:absolute;
+	left:800px;
+	background-color: #ffffff;
+	border: 3px solid #888888;
+	z-index:100;
+	line-height:2.0;
+}
+.goukei{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+
+.red{
+	color: red;
+}
+
+.false{
+	text-align: center;
+}
+
+
+
+/*---ここから追加分0201---*/
+.sort{
+	width:150px;
+	border: 2px solid #474747;
+	display: block;
+	margin: 20px 20px 20px auto;
+	padding:5px;
+}
+
+.selectwrap {
+  position: relative;
+}
+.selectwrap::after {
+  position: absolute;
+  top: 10px; /* 矢印の位置 */
+  right: 35px; /* 矢印の位置 */
+  width: 10px; /* 矢印の大きさ */
+  height: 10px; /* 矢印の大きさ */
+  border-top: 3px solid #58504A; /* 矢印の線 */
+  border-right: 3px solid #58504A; /* 矢印の線 */
+  -webkit-transform: rotate(135deg); /* 矢印の傾き */
+  transform: rotate(135deg); /* 矢印の傾き */
+  pointer-events: none; /* 矢印部分もクリック可能にする */
+  content: ""; 
+  }
+
+select:focus {
+  outline: none; /* focus 時のデフォルトの枠線を消す */
+}
+::-ms-expand {
+  display: none;  /* IE 対応( select のデフォルト矢印を消す) */
+}
+
+/*ここまでセレクトボックス*/
+
+
+
+
+input[type="button"], .bt , .cart_button_class{
+	width:200px;
+    text-align: center;
+    background-color: #888888;
+	color: #ffffff;
+	padding:10px;
+	margin: 0 0 0 auto;
+}
+.bt,#cart_button{
+	margin-left:50px;
+}
+#no_item{
+	margin:50px auto 350px;
+}
+/*---ここまで追加分0201---*/
+
+
+
+/*2023-02-02 fujimoto追加分 ボタンの丸み*/
+.radius20{
+	border-radius:20px;
+}

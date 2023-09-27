@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+/*2023-02-27 レスポンシブ　kita*/
+/*2023-02-08 fujimoto 支払い時の規約追加*/
+
+h2{
+	font-size: 22px;
+}
+
+.migi{
+  top: 0;
+  height: 0;
+  margin: 0 auto;
+  width: 1200px;
+  position: absolute;
+}
+.pay{
+	top:40vh;
+  margin: auto 20px auto auto;
+	width:320px;
+	padding:30px;
+	position:relative;
+	background-color: #ffffff;
+	border-radius: 10px;
+	border: 3px solid #888888;
+	z-index:100;
+	line-height:2.0;
+}
+
+.hh{
+	margin: 80px auto 20px auto;
+	text-align: center;
+	font-size:20px;
+}
+
+#he{
+  display: flex;
+}
+#log{
+  font-size: 20px;
+  padding-top: 30px;
+}
+main > h1{
+  text-align: center;
+}
+.syouhin{
+	width:1000px;
+	margin: 0 auto;
+	display: flex;
+}
+.clm{
+  width:800px;
+}
+.sho{
+	margin: auto;
+}
+
+main{
+	min-height:540px;
+}
+
+input[type="submit"] {
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-left:50px;
+  padding-right:50px;
+  border: 1px solid #1e3325;
+  text-align: center;
+  margin-left:60px;
+  margin-top:20px;
+  border-radius: 50px;
+  font-weight:bold;
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ 
+.line{
+	width: 730px;
+    margin: 0 auto 0 80px;
+    border-top: 3px solid #888888;
+}
+
+.pay{
+	top:350px;
+	right:20px;
+	width:320px;
+	padding:30px;
+	position:absolute;
+	background-color: #ffffff;
+	border-radius: 10px;
+	border: 3px solid #888888;
+	z-index:100;
+	line-height:2.0;
+}
+.goukei{
+	font-size: 24px;
+	font-weight: bold;
+}
+.bt {
+	background-color: #888888;
+	color: #ffffff;
+	padding:5px;
+	margin: 0 0 0 auto;
+	border-radius: 20px;
+}
+table{
+	margin: 0 auto 0 100px;
+}
+tr{
+	height: 200px;
+	
+}
+th {
+	width:150px;
+	height:150px;
+	text-align:center;
+	vertical-align: middle;
+}
+th img{
+	max-width:150px;
+	max-height:150px;
+	object-fit: contain;
+	border-radius: 8px;
+	margin: auto;
+}
+td{
+	margin: auto 0;
+	vertical-align: middle;
+}
+td p{
+	margin: 20px;
+	width: 450px;
+}
+
+.pay input[type="radio"]{
+	width: 20px;
+    height: 20px;
+    vertical-align: middle;
+	margin-right:4px;
+} 
+.pay input[type="checkbox"]{
+	width: 20px;
+    height: 20px;
+    vertical-align: middle;
+	margin-right:4px;
+} 
+
+.lv{
+	accent-color: #888888;
+}
+/*20230208 fujimoto*/
+.attention{
+	color:red;
+	font-size:12px;
+	user-select:none;
+}
+
+
+
+
+
+ /* ----------ここからレスポンシブ---------- */
+ @media screen and (max-width: 640px) {
+ 
+	h1{
+    margin: 20px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+	table{
+    margin : 5px auto;
+    width: 100vw;
+  }
+  tr{
+    height: 25vh;
+    width: 70vw;
+  }
+  th{
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+  th img {
+    max-width: 100px;
+    max-height: 100%;
+  }
+  
+  td p{
+    margin: 0;
+    padding: 8px;
+    width: 100%;
+  }
+	.clm{
+		width: 100%;
+	}
+  .syouimg{
+		width: 100px;
+	}
+  
+  .line{
+    width: 90%;
+    margin: 5px auto;
+    border-top: 2px solid #888888;
+  }
+  .pay{
+    position: static;
+    width: 100%;
+    padding: 30px 50px;
+    border-radius: 0;
+    border: 0;
+    /* text-align: center; */
+  }
+  .migi{
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  .goukei{
+    font-size: 20px;
+  }
+  .hh{
+    margin: 20px 0 0 0;
+    font-size: 18px;
+  }
+
+  
+
+
+}

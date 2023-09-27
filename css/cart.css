@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+/* 20220222 レスポンシブkita*/
+
+main{
+	min-height:540px;
+}
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 80px 20px 0; */
+}
+#he{
+  display: flex;
+}
+#log{
+  font-size: 20px;
+  padding-top: 30px;
+  /* display: flex; */
+  /* margin: 0 0 0 800px; */
+}
+
+#nav > ul {
+  /* position:fixed; */
+  display: flex;
+  /* justify-content: space-around; */
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+}
+
+
+#nav{
+  height: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+h1{
+  text-align: center;
+  margin: 30px 0 20px 0;
+  font-size: 20px;
+}
+
+.syouhin{
+  width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  align-items:center;
+}
+table{
+	margin: 0 auto 0 100px;
+}
+tr{
+	height: 200px;
+	
+}
+th {
+	width:200px;
+	height:200px;
+	text-align:center;
+	vertical-align: middle;
+}
+th img{
+	max-width:200px;
+	max-height:200px;
+	object-fit: contain;
+	border-radius: 8px;
+	margin: auto;
+}
+td{
+	margin: auto 0;
+	vertical-align: middle;
+}
+td p{
+	margin: 20px;
+	width: 450px;
+}
+
+.setumei{
+  margin-left: 40px;
+}
+
+input[type="button"], #payment, .back {
+  height:50px;
+  width: 250px;
+  border: 1px solid #1e3325;
+  text-align: center;
+  margin: 8px;
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ 
+.next{
+	display:none;
+	text-align: center;
+	margin: auto;
+	padding-top:20px;
+	width: 300px;
+    height: 100px;
+    border:1px solid #edbbc1;
+    background-color: #edbbc1;
+    color: #ffffff;
+    border-radius:20px;
+    /* font-weight: bold; */
+}
+.clm *{
+	margin-top:5px;
+}
+.clm{
+	margin-left:20px;
+	width:800px;
+}
+/*2023-02-21 fujimoto 追加分*/
+#payment,.btn2 button,.btn1 button ,.back{
+	border-radius: 30px;
+}
+.btn2 button,.btn1 button{
+	padding-left:20px;
+	padding-right:20px;
+}
+.migi{
+  top: 0;
+  height: 0;
+  margin: 0 auto;
+  width: 1200px;
+  position: absolute;
+}
+.pay{
+	top:350px;
+  margin: auto 20px auto auto;
+	width:320px;
+	padding:30px;
+	position:relative;
+	background-color: #ffffff;
+	border-radius: 10px;
+	border: 3px solid #888888;
+	z-index:100;
+	line-height:2.0;
+}
+.line {
+    width: 730px;
+    margin:  20px auto 20px 80px;
+    border-top: 3px solid #888888;
+}
+
+
+.goukei{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.flex{
+	display: flex;
+	flex-wrap:wrap;
+	gap:30px 30px;
+	margin:20px;
+}
+
+
+
+.discount {
+	text-decoration-line: line-through;
+	text-decoration-color: red;
+}
+
+.btn1 button {
+	padding: 10px; 
+	margin-bottom: 10px; 
+	border: 1px solid #333333;
+	background-color:#ffffff;
+}
+
+.btn2 button {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #999999;
+	background-color: #999999;
+	color: #ffffff;
+}
+strong{
+	display: block;
+	margin:50px auto;
+	text-align: center;
+}
+
+/*2023-02-06fujimoto追加分*/
+
+.discount_val{
+	color:red;
+}
+
+.nav-sp{
+	z-index: 300;
+}
+
+
+.sho{
+	margin: auto;
+}
+
+input[type="submit"] {
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-left:50px;
+  padding-right:50px;
+  border: 1px solid #1e3325;
+  text-align: center;
+  margin-left:60px;
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+
+
+
+ /* ----------ここからレスポンシブ---------- */
+@media screen and (max-width: 640px) {
+  h1{
+    margin: 20px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  table{
+    margin : 5px auto;
+    width: 100%;
+  }
+  tr{
+    /* height: 30vh; */
+    width: 100%;
+  }
+  th{
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+  th img {
+    max-width: 100px;
+    max-height: 100%;
+  }
+  td{
+    width: 100%;
+  }
+  td p{
+    margin: 0;
+    padding: 8px;
+    width: 100%;
+  }
+  .flex{
+    display:block;
+    margin: 5px;
+  }
+  .btn1 button, .btn2 button {
+    padding: 5px;
+    width: 40vw;
+    text-align: center;
+  }
+  .btn1 form, .btn2 form{
+    text-align: center;
+    margin-top: 3px;
+  }
+  
+  .line{
+    width: 90%;
+    margin: 5px auto;
+    border-top: 2px solid #888888;
+  }
+
+  .pay{
+    position: static;
+    width: 100%;
+    padding: 30px 50px;
+    border-radius: 0;
+    border: 0;
+    /* text-align: center; */
+  }
+  .migi{
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  .goukei{
+    font-size: 20px;
+  }
+  #payment , .back{
+    display: block;
+    margin: 0 auto;
+    width: 60vw;
+    height: 40px;
+  }
+  #keep_shopping{
+    display: block;
+    text-align: center;
+  }
+  
+  
+
+
+
+
+
+}
+
+

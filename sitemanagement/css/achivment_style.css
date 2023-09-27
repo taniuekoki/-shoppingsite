@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+h1{
+	padding:5px 0;
+	font-weight:bold;
+	text-align:center;
+	font-size: 26px;
+}
+#logo{
+	display: block;
+	width: 300px;
+	margin: 40px auto 0;
+}
+#logo > img{
+		width: 300px;
+}
+main{
+	width:1200px;
+	margin:0 auto;
+}
+ul{
+	display: flex;
+	margin:0 auto;
+	width: 570px;
+}
+ul li{
+	font-size: 22px;
+	margin: 0;
+	width:285px;
+}
+ul li .a{
+	font-weight:bold;
+	color:#FFF;
+	text-align:center;
+	padding:10px 30px;
+	background:#cbcbcb;
+	display: block;
+}
+ul li .a:hover{
+	background:#ababab;
+	color:rgb(238, 238, 238);
+}
+ul li .a.current{
+	background:#4f4f4f;
+	color:#FFF;
+}
+#contents{
+	clear:both;
+	margin-bottom:150px;
+}
+#contents p{
+	margin-top:5px;
+}
+#boder{
+	border-left: 1px solid;
+}
+.title{
+	text-align:center;
+	font-size: 16px;
+	margin-left: 180px;
+	font-weight:bold;
+}
+.btn{
+  	border: 1px solid #1e3325;
+  	text-align: center;
+  	margin: 0px auto;
+  	border-radius: 5px;
+	padding: 5px 40px;
+}
+.csv{
+	position: relative;
+	margin:10px 0 0;
+	left:800px;
+	background-color:#DDDDDD;
+}
+.nbb{
+	text-align: center;
+}
+.nbb div{
+	display: inline-block;
+}
+.next_back_btn{
+	position:relative;
+	top: -10px;
+	font-size: 24px;
+	
+}
+/*------------総売り上げ表用CSS↓--------------*/
+#line-example-1 {
+  height: 350px;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top:0px;
+  background-color: #f6f6f6;
+}
+.charts-css.line tbody tr th {
+	position: relative;
+	left:45px;
+}
+#total_proceeds{
+	width: 700px;
+	margin: 20px auto 0;
+}
+.scale{
+	position: relative;
+	width: 100px;
+	height:0;
+	left: -105px;
+	text-align: right;
+}
+#scale1,#scale2,#scale3,#scale4{
+	display:block;
+}
+#scale1,#scale2,#scale3,#scale4{
+	position: relative;
+}
+#scale1{
+	top:20px;
+}
+#scale2{
+	top:78px;
+}
+#scale3{
+	top:136px;
+}
+#scale4{
+	top:194px;
+}
+.title_wrap{
+	position: relative;
+	text-align: right;
+}
+#title{
+	display: inline-block;
+	font-weight:bold;
+	font-size: 20px;
+	margin-left: 420px;
+}
+/*------------総売り上げ表用CSS↑--------------*/
+
+/*------------カテゴリ別表用CSS↓--------------*/
+#stacked-example-3 {
+  height: 350px;
+  max-width: 700px;
+  margin: 0 auto;
+  --heading-size: 2.5rem;
+  --color-1: rgba(255, 200, 0, 0.6);
+  --color-2: rgba(255, 150, 0, 0.6);
+  --color-3: rgba(255,  75, 0, 0.6);
+  --color-4: rgba(255,   0, 0, 0.6);
+    display: table; /*テーブル要素に変更*/
+  width: 100%;
+}
+#stacked-example-3 caption {
+  font-weight: bold;
+}
+#stacked-example-3 td{
+	display: flex;
+	align-items: center;
+}
+#year_category{
+	display: inline-block;
+	font-weight:bold;
+	font-size: 20px;
+	margin-left: 30px;
+}
+.category_table_wrap{
+	width: 700px;
+	margin: 0 auto;
+}
+.year_category_wrap{
+	width: 700px;
+	margin: 0 auto;
+}
+/*------------カテゴリ別売り上げ表用CSS↑--------------*/
+footer {
+	margin: 0 auto 50px;
+	margin-top: -120px;
+	width: 1200px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.btn > .totalproceeds_csv,.category_csv{
+	padding: 10px 20px
+}
+
+
+.menubackbtn{
+	position:relative;
+	background-color:#DDDDDD;
+	margin-top:40px;
+	left:705px;
+}

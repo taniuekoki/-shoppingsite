@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+/*---- 0215 kita レスポンシブ ---*/
+/* 2023-03-07 12:00 谷上 取り消し線iphoneで反映されない対応 */
+body {
+  /* font-family: 'Sawarabi Mincho',serif; */
+  font-size: 18px;
+  color: #121212;
+  /* width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 80px 20px 0; */
+}
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 80px 20px 0; */
+}
+
+header {
+  background-color: #ffffff;
+}
+
+h1 img{
+  width: 400PX;
+  height: 100PX;
+}
+
+header h1 {
+  font-size: 30px;
+  padding-top: 20px;
+  margin-left: 100px;
+  height:  50px;
+  width: 800px;
+}
+
+#he{
+  display: flex;
+}
+#log{
+  font-size: 20px;
+  padding-top: 30px;
+  /* display: flex; */
+  /* margin: 0 0 0 800px; */
+}
+
+#nav > ul {
+  /* position:fixed; */
+  display: flex;
+  /* justify-content: space-around; */
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+}
+.jj{
+  position:absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+  background-color: #ffffff;
+}
+
+#nav{
+  height: 100px;
+  /* margin-top: 10px; */
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+
+
+#ot{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.syouimg {
+	width:400px;
+	height:400px;
+ text-align: center;
+  vertical-align: middle;
+  display: flex;
+}
+
+.syouimg img{
+	max-width:400px;
+	max-height:400px;
+  	object-fit: contain;
+ 	 border-radius: 8px;
+ 	 align-items:center;
+ 	 margin: auto;
+}
+
+.syouhin{
+  width: 800px;
+  height: 400px;
+  margin: 50px auto;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+
+
+input[type="button"],input[type="submit"] {
+  height:40px;
+  width: 250px;
+  border: 1px solid #1e3325;
+  text-align: center;
+  padding:10px;
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 10px;
+  margin-bottom: 0px;
+ }
+ 
+.next{
+	display:none;
+	text-align: center;
+	margin: auto;
+	padding-top:20px;
+	width: 300px;
+    height: 100px;
+    border:1px solid #edbbc1;
+    background-color: #edbbc1;
+    color: #ffffff;
+    border-radius:20px;
+    /* font-weight: bold; */
+}
+.red{
+	color:red;
+}
+/* 2023-03-07 12:00 谷上 取り消し線iphoneで反映されない対応 */
+.discount {
+	text-decoration-line: line-through;
+	text-decoration-color: red;
+}
+.link{
+	color:blue;
+	text-decoration:underline;
+    text-decoration-color: blue;
+}
+.flex{
+	display:flex;
+}
+.sale{
+	background-color:rgba(250, 255, 178, 0.893);
+	text-align: center;
+	font-weight:bold;
+}
+.setumei{
+	width:250px;
+}
+
+/*2023-02-01 fujimoto追加分*/
+input[type="button"], input[type="submit"]{
+	border-radius: 20px;
+	display: block;
+	margin: auto;
+}
+
+#like{
+	background-color:#fbd079;
+	margin: 10px auto;
+	display: block;
+}
+
+#notlike{
+	background-color:#A0A0A0;
+	color:#ffffff;
+	margin: 10px auto;
+}
+#like_in{
+	position: relative;
+    top: -4px;
+    height:0px;
+    text-align: center;
+    color:#555555;
+    font-size:16px;
+}
+
+.cart_msg{
+	position: relative;
+	height:0px;
+	text-align: center;
+	font-size:16px;
+	top: -15px;
+	
+}
+#history{
+	display:block;
+	width:800px;
+	font-size:30px;
+	background-color:rgb(255, 201, 182);
+	color:red;
+	text-align: center;
+	margin:80px auto 20px auto;
+	border-radius:20px;
+}
+/*商品説明の幅調整する！！*/
+.setumei{
+	width:300px;
+}
+
+
+/* ----------ここからレスポンシブ---------- */
+@media screen and (max-width: 640px) {
+
+  .syouimg{
+    width: 100%;
+    height: 30vh;
+    display: block;
+  }
+  .syouimg img{
+    max-width: 80%;
+    max-height: 30vh;
+    display: block;
+    margin: auto;
+  }
+  .syouhin{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 30px auto;
+  }
+  .setumei{
+    padding: 10px;
+    width: 100%;
+  }
+  #history{
+    width: 90%;
+    font-size: 20px;
+    padding: 5px;
+    margin:20px auto 20px auto;
+  }
+
+
+
+
+}

@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+body {
+  /* font-family: 'Sawarabi Mincho',serif; */
+  font-size: 18px;
+  color: #121212;
+  /* width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 80px 20px 0; */
+}
+main{
+	min-height:540px;
+}
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 80px 20px 0; */
+}
+
+header {
+  background-color: #ffffff;
+}
+
+h1 img{
+  width: 400PX;
+  height: 100PX;
+}
+
+header h1 {
+  font-size: 30px;
+  padding-top: 20px;
+  margin-left: 100px;
+  height:  50px;
+  width: 800px;
+}
+
+#he{
+  display: flex;
+}
+#log{
+  font-size: 20px;
+  padding-top: 30px;
+  /* display: flex; */
+  /* margin: 0 0 0 800px; */
+}
+
+#nav > ul {
+  /* position:fixed; */
+  display: flex;
+  /* justify-content: space-around; */
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+}
+.jj{
+  position:absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+  background-color: #ffffff;
+}
+
+#nav{
+  height: 100px;
+  /* margin-top: 10px; */
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.syouhin{
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  /* justify-content:space-evenly; */
+  align-items: center;
+}
+
+.syouimg img{
+	width:200px;
+	height:200px;
+  /* margin-top:20px; */
+  object-fit: contain;
+}
+
+.setumei{
+  margin-left: 40px;
+}
+
+input[type="button"], #payment, .back {
+  height:50px;
+  width: 250px;
+  border: 1px solid #1e3325;
+	text-align: center;
+	
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ 
+.next{
+	display:none;
+	text-align: center;
+	margin: auto;
+	padding-top:20px;
+	width: 300px;
+    height: 100px;
+    border:1px solid #edbbc1;
+    background-color: #edbbc1;
+    color: #ffffff;
+    border-radius:20px;
+    /* font-weight: bold; */
+}
+.clm *{
+	margin-top:5px;
+}
+.clm{
+	margin-left:20px;
+}
+
+/*2023-02-21 fujimoto 追加分*/
+#payment,.btn2 button,.btn1 button ,.back{
+	border-radius: 30px;
+}
+.btn2 button,.btn1 button{
+	padding-left:20px;
+	padding-right:20px;
+}
+.pay{
+	top:100px;
+	width:320px;
+	right:20px;
+	border-radius: 10px;
+}
+.line {
+    width: 730px;
+    margin: 0 auto 0 80px;
+}

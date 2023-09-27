@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+body {
+  font-size: 18px;
+  color: #121212;
+  
+}
+
+main{
+	margin-bottom: 60px;
+}
+
+main h2{
+	font-size: 20px;
+	text-align: center;
+	margin: 40px 0;
+}
+main p{
+	margin: 10px 0;
+}
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+input[type="submit"] {
+	display: block;
+	box-sizing: border-box;
+    text-align: center;
+    width: 200px;
+    margin: 0 0 0 auto;
+    padding:10px;
+	color: #ffffff;
+	background: #888888;
+	
+}
+
+.form{
+	width:600px;
+	margin: 0 auto;
+}
+select{
+  border: 1px solid #cccccc;
+  height: 35px;
+  width: 600px;
+  padding-left: 15px;
+  padding: 8px;
+
+}
+input[type="email"],
+input[type="password"]{
+	border: 1px solid #cccccc;
+  background-color: #ffffff;
+  width: 600px;
+  margin: 5px;
+  padding: 4px 8px;
+}
+textarea{
+	height: 100px;
+	border: 1px solid #cccccc;
+  background-color: #ffffff;
+  width: 600px;
+  margin: 5px;
+  padding: 4px 8px;
+}
+input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+}
+.kiyaku{
+	text-align: center;
+}
+
+.red{
+	color: red;
+	width: 600px;
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+/*ここからセレクトボックス*/
+
+
+.selectwrap {
+  position: relative;
+  width: 600px;
+  
+}
+.selectwrap::after {
+  position: absolute;
+  top: 30%; /* 矢印の位置 */
+  right: 15px; /* 矢印の位置 */
+  width: 10px; /* 矢印の大きさ */
+  height: 10px; /* 矢印の大きさ */
+  border-top: 3px solid #58504A; /* 矢印の線 */
+  border-right: 3px solid #58504A; /* 矢印の線 */
+  -webkit-transform: rotate(135deg); /* 矢印の傾き */
+  transform: rotate(135deg); /* 矢印の傾き */
+  pointer-events: none; /* 矢印部分もクリック可能にする */
+  content: ""; 
+  }
+.nickname {
+  
+  width: 600px; /* セレクトボックスの幅 */
+  height: 105px; /* セレクトボックスの高さ */
+  background-color: #ffffff;  /* セレクトボックスの背景色 */
+  
+  
+  color: #58504A;  /* セレクトボックスの文字色 */
+  padding: 20px; /* セレクトボックスの内側の余白 */
+  cursor: pointer;
+}
+select:focus {
+  outline: none; /* focus 時のデフォルトの枠線を消す */
+}
+::-ms-expand {
+  display: none;  /* IE 対応( select のデフォルト矢印を消す) */
+}

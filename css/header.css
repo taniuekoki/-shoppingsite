@@ -1,0 +1,525 @@
+@charset "utf-8";
+
+/*---- 0213 h1 img kita が修正 ---*/
+/*2023-02-27 16:00 fujimoto #footerを修正*/
+
+body {
+    overflow-y: scroll;
+    font-size: 18px;
+    color: #121212;
+    /* width: 1200px; */
+    margin: 0 auto;
+}
+
+.innerWrap, #he {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #ffffff;
+}
+
+
+#he{
+  display: flex;
+}
+#log{
+  width: 300px;
+  font-size: 20px;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  margin:0 20px 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+#log a{
+	overflow: hidden;
+}
+
+#nav > ul {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  height: 93px;
+}
+.hidari{
+  width: 700px;
+  background-color: #ffffff;
+}
+
+.jj{
+  display: none;
+  height: 93px;
+  position:relative;
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0 0 0 auto;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+#nav{
+  height: 100px;
+  /* margin-top: 10px; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* 検索窓 */
+
+.search {
+	display: flex;
+	width: 80%;
+	margin-top:10px;
+}
+.search input[type=text] {
+	width: 100%;
+    height: 40px;
+	color: #474747;
+	border: 2px solid #474747;
+	border-radius: 3px 0 0 3px;
+	outline: none;
+    margin-top: 5px;
+    padding: 4px 8px;
+}
+.search button[type=submit] {
+  text-align: center;
+  width: 70px;
+  margin-top: 5px;
+  height:40px;
+	/* padding: 10px　20px; */
+	/* font-size: 16px; */
+	color: #ffffff;
+	background: #474747;
+	border: 2px solid #474747;
+	border-radius: 0 3px 3px 0;
+	cursor: pointer;
+}
+.select{
+	width:250px;
+	margin-top: 15px;
+	margin-right:15px;
+	height:40px;
+	border: 2px solid #474747;
+	padding:5px;
+}
+
+/*.search button[type=submit] img{
+  margin-top: 0px;
+}*/
+/* 検索窓ここまで */
+
+/* radioボタン */
+.sel{
+	display:flex;
+	width: 600px;
+}
+.text {
+  display: none;
+}
+.text01 {
+  width: 600px;
+  display: block;
+}
+
+
+
+/* radioボタン */
+
+/* アイコン */
+.icon{
+  text-align: center;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+.icon img{
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+}
+.me{
+  font-size: 14px;
+}
+/* アイコンここまで */
+
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+
+/* ハンバーガーメニュー */
+.hamburger-menu{
+  margin-left: 10px;
+  /* text-align: center; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 10;
+}
+.mm{
+  text-align: center;
+}
+.hamburger-menu__line{
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: rgb(36, 35, 35);
+  position: relative;
+  transition: all 0.5s;
+}
+
+.hamburger-menu__line::before,
+.hamburger-menu__line::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: rgb(13, 12, 12);
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.hamburger-menu__line::before{
+  transform: translateY(-12px);
+}
+.hamburger-menu__line::after{
+  transform: translateY(12px);
+}
+
+.hamburger-menu.open .hamburger-menu__line{
+  background-color: transparent;
+}
+.hamburger-menu.open .hamburger-menu__line::before{
+  transform: rotate(45deg);
+}
+.hamburger-menu.open .hamburger-menu__line::after{
+  transform: rotate(-45deg);
+}
+
+/* ナビゲーション */
+.nav-sp{
+  box-sizing: border-box;
+  position: absolute;
+  width: 170px;
+  padding: 10px 10px 15px;
+  background-color: #ffffff;
+  text-align: left;
+  transition: right 0.5s;
+  z-index: 110;
+  display: none;
+  right: 0;
+}
+.nav-sp a{
+  display: inline-block;
+  padding: 15px 0;
+  font-size: 20px;
+}
+
+/*  */
+
+
+
+
+/*ここからセレクトボックス*/
+
+
+.selectwrapp {
+  position: relative;
+  width: 600px;
+  
+}
+.selectwrapp::after {
+  position: absolute;
+  top: 27px; /* 矢印の位置 */
+  right: 30px; /* 矢印の位置 */
+  width: 10px; /* 矢印の大きさ */
+  height: 10px; /* 矢印の大きさ */
+  border-top: 3px solid #58504A; /* 矢印の線 */
+  border-right: 3px solid #58504A; /* 矢印の線 */
+  -webkit-transform: rotate(135deg); /* 矢印の傾き */
+  transform: rotate(135deg); /* 矢印の傾き */
+  pointer-events: none; /* 矢印部分もクリック可能にする */
+  content: ""; 
+  }
+
+select:focus {
+  outline: none; /* focus 時のデフォルトの枠線を消す */
+}
+::-ms-expand {
+  display: none;  /* IE 対応( select のデフォルト矢印を消す) */
+}
+
+/*ここまでセレクトボックス*/
+
+/*2023-02-01 fujimoto追加分*/
+#rogo{
+	height:90px;
+	width: 320px;
+}
+div#he{
+	height:90px;
+}
+
+.rb{
+	margin-top:5px;
+	accent-color: #888888;
+}
+#nav{
+	height:50px;
+}
+.select{
+	border-radius:5px;
+}
+.search input[type=text]{
+	border-radius:5px 0 0 5px;
+}
+.sort{
+	border-radius:5px;
+}
+.nav-sp{
+	border-radius:10px;
+	background-color:#f0f0f0;
+} 
+.nav-sp ul{
+	text-align:center;
+}
+
+.rb input[type="radio"]{
+	width: 20px;
+    height: 20px;
+    vertical-align: middle;
+	margin-right:4px;
+} 
+
+#footer{
+  display: block;
+  margin: 100px auto 10px auto;
+  width: 10%;
+  max-width:120px;
+}
+
+
+
+/*** ----------ここからレスポンシブ---------- ***/
+
+@media screen and (max-width: 640px) {
+  body {
+    overflow-y: auto;
+    font-size: 16px;
+    color: #121212;
+    width: 100%;
+    margin: 0 auto;
+    /* position: fixed; */
+  }
+  .innerWrap, #he {
+    width: 100%;
+    margin: 0;
+  }
+  #rogo, #he > a{
+    height:45px;
+    width: 160px;
+    margin: 0 0 0 5px;
+  }
+  #log{
+    display:none;
+  }
+  #nav >ul{
+    width: 100%;
+  }
+  .jj > .home{
+    display:none;
+  }
+  .icon img{
+    margin-top: 14px;
+    width: 35px;
+    height: 35px;
+  }
+  .jj{
+    width: 40vw;
+    height: 50px;
+    margin: 0;
+    position: absolute;
+    top: 3px;
+    right:5px;
+  }
+  .header{
+    background-color: #ffffff;
+    /* position: fixed; */
+    z-index: 100;
+    margin-top: 10px;
+    height: 105px;
+  }
+  .me{
+    display: none;
+  }
+  .text01{
+    width: 100%;
+    margin-left: 10px;
+  }
+  .hidari{
+    display: block;
+    width: 100%;
+    height: 50px;
+  }
+  .sel{
+    width: 100%;
+  }
+  .select{
+    width: 100%;
+    height: 30px;
+    margin-top: 0;
+    padding: 2px 5px;
+  }
+  .search{
+    margin-top: 0;
+    margin-right: 10px;
+    width: 90%;
+  }
+  .selectwrapp{
+    /* width:px; */
+    margin-left: 10px;
+  }
+  .search input[type=text]{
+    height: 30px;
+    margin-top: 0;
+    padding: 0 5px;
+  }
+  .search button[type=submit]{
+    height: 30px;
+    margin-top: 0;
+    /* width: 60px; */
+  }
+  #tag_search_btn{
+    margin-left: 8px;
+  }
+  div #he{
+    width: 180px;
+    height: 50px;
+    /* display: block; */
+    /* align-items: center; */
+  }
+  .rb{
+    margin-left: 10px;
+  }
+  .rb label{
+    margin-left: 8px;
+  }
+  .ii{
+    position: absolute;
+    top: 10px;
+    right:10px;
+  }
+  .rb input[type="radio"]{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+  .hamburger-menu{
+    position: relative;
+  }
+  .nav-sp{
+    width: 120px;
+    text-align: center;
+  }
+  .nav-sp a{
+    padding: 5px 0;
+    font-size: 16px;
+    height: 30px;
+    width: 100px;
+  }
+
+  
+
+  /*ここからセレクトボックス*/
+
+
+  .selectwrapp {
+    position: relative;
+    /* width: 100%; */
+    
+  }
+  .selectwrapp::after {
+    position: absolute;
+    top: 9px; /* 矢印の位置 */
+    right: 9px; /* 矢印の位置 */
+    width: 8px; /* 矢印の大きさ */
+    height: 8px; /* 矢印の大きさ */
+    border-top: 3px solid #58504A; /* 矢印の線 */
+    border-right: 3px solid #58504A; /* 矢印の線 */
+    -webkit-transform: rotate(135deg); /* 矢印の傾き */
+    transform: rotate(135deg); /* 矢印の傾き */
+    pointer-events: none; /* 矢印部分もクリック可能にする */
+    content: ""; 
+    }
+
+  select:focus {
+    outline: none; /* focus 時のデフォルトの枠線を消す */
+  }
+  ::-ms-expand {
+    display: none;  /* IE 対応( select のデフォルト矢印を消す) */
+  }
+
+  /*ここまでセレクトボックス*/
+
+  /*--- ハンバーガメニュー---*/
+  .hamburger-menu{
+    margin-right: 5px;
+    /* text-align: center; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .hamburger-menu__line{
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgb(36, 35, 35);
+    position: relative;
+    transition: all 0.5s;
+  }
+  
+  .hamburger-menu__line::before,
+  .hamburger-menu__line::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgb(13, 12, 12);
+    position: absolute;
+    transition: all 0.5s;
+  }
+  .mm{
+    width: 35px;
+  }
+
+  #footer{
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 20%;
+  	max-width:120px;
+  }
+
+
+}

@@ -1,0 +1,161 @@
+@charset "utf-8";
+/*02-01 15:03 谷上　購入履歴がない時処理*/
+body {
+  /* font-family: 'Sawarabi Mincho',serif; */
+  font-size: 18px;
+  color: #121212;
+  /* width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 80px 20px 0; */
+}
+h1{
+	font-size: 24px;
+}
+
+h2{
+	font-size: 22px;
+}
+
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  /* padding: 80px 20px 0; */
+}
+
+header {
+  background-color: #ffffff;
+}
+
+header h1 {
+  font-size: 30px;
+  padding-top: 20px;
+  margin-left: 100px;
+  height:  50px;
+  width: 800px;
+}
+
+#he{
+  display: flex;
+}
+#log{
+  font-size: 20px;
+  padding-top: 30px;
+  /* display: flex; */
+  /* margin: 0 0 0 800px; */
+}
+
+#nav > ul {
+  /* position:fixed; */
+  display: flex;
+  /* justify-content: space-around; */
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+}
+.jj{
+  position:absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+  background-color: #ffffff;
+}
+
+
+
+
+h1{
+  text-align: center;
+}
+
+.syouhin{
+	width:1000px;
+	margin: 20px auto;
+	display: flex;
+}
+
+.syouimg img{
+	width:300px;
+	height:300px;
+    margin:auto; 
+    object-fit: contain;
+}
+
+.topclm{
+  display: flex;
+}
+.day{
+	padding:20px 0;
+}
+
+
+.sho{
+	margin: auto ;
+}
+.sho2{
+	margin: auto 0 auto auto ;
+}
+.clm p{
+	padding:20px 0;
+}
+
+
+input[type="button"], .bt {
+	width:200px;
+    text-align: center;
+    background-color: #888888;
+	color: #ffffff;
+	padding:10px;
+	margin: 0 0 0 auto;
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ 
+.line{
+	border-top: 3px solid #888888;
+	width:1000px;
+	margin: 0 auto;
+}
+
+.pay{
+	top:100px;
+	width:350px;
+	padding:30px;
+	position:absolute;
+	left:800px;
+	background-color: #ffffff;
+	border: 3px solid #888888;
+	z-index:100;
+	line-height:2.0;
+}
+.goukei{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+
+.red{
+	color: red;
+}
+
+.false{
+	text-align: center;
+}
+/*.bt {
+	background-color: #888888;
+	color: #ffffff;
+	padding:10px;
+	margin: 0 0 0 auto;
+}*/
+.bt,#cart_button{
+	margin-left:50px;
+}
+#no_item{
+	margin:50px auto 350px;
+}

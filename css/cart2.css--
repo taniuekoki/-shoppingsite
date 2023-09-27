@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+body {
+  /* font-family: 'Sawarabi Mincho',serif; */
+  font-size: 18px;
+  color: #121212;
+  /* width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 80px 20px 0; */
+}
+h1{
+	font-size: 24px;
+}
+
+h2{
+	font-size: 22px;
+}
+
+.innerWrap {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  /* padding: 80px 20px 0; */
+}
+
+header {
+  background-color: #ffffff;
+}
+
+header h1 {
+  font-size: 30px;
+  padding-top: 20px;
+  margin-left: 100px;
+  height:  50px;
+  width: 800px;
+}
+
+#he{
+  display: flex;
+}
+#log{
+  font-size: 20px;
+  padding-top: 30px;
+  /* display: flex; */
+  /* margin: 0 0 0 800px; */
+}
+
+#nav > ul {
+  /* position:fixed; */
+  display: flex;
+  /* justify-content: space-around; */
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+}
+.jj{
+  position:absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 10px 20px; */
+  background-color: #ffffff;
+}
+
+#nav{
+  height: 100px;
+  /* margin-top: 10px; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.syouhin{
+	width:1000px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.syouimg img{
+	width:150px;
+	height:150px;
+  /* margin-top:20px; */
+  object-fit: contain;
+}
+
+.topclm{
+  
+  display: flex;
+}
+.clm{
+  width:800px;
+  /*display: flex;*/
+  
+}
+.sho{
+	margin: auto;
+}
+
+
+
+input[type="submit"] {
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-left:50px;
+  padding-right:50px;
+  border: 1px solid #1e3325;
+  text-align: center;
+  margin-left:60px;
+}
+
+.tagu{
+  /* font-size: 60px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ 
+.line{
+	border-top: 3px solid #888888;
+	width:1000px;
+	margin: 0 auto;
+}
+
+.pay{
+	padding:30px;
+	position:absolute;
+	/*left:800px;*/
+	background-color: #ffffff;
+	border: 3px solid #888888;
+	z-index:100;
+	line-height:2.0;
+}
+.goukei{
+	font-size: 24px;
+	font-weight: bold;
+}
+input[type="radio"]{
+	vertical-align: baseline;
+	margin-right:4px;
+} 
+
+.flex{
+	display: flex;
+	flex-wrap:wrap;
+	gap:30px 30px;
+	margin:20px;
+}
+
+.discount {
+	text-decoration-line: line-through;
+	text-decoration-color: red;
+}
+
+.btn1 button {
+	padding: 10px; 
+	margin-bottom: 10px; 
+	border: 1px solid #333333;
+	background-color:#ffffff;
+}
+
+.btn2 button {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #333333;
+	background-color: #999999;
+	
+}
+
+/*2023-02-06fujimoto追加分*/
+
+.discount_val{
+	color:red;
+}
+
+.nav-sp{
+	z-index: 300;
+}
